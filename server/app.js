@@ -6,7 +6,20 @@ const errorHandler = require('./middlewares/errorHandler');
 
 const app = express();
 
-app.use(cors());
+//app.use(cors());
+const cors = require('cors');
+
+const allowedOrigins = [
+  'https://tinylink-gold-one.vercel.app',  // your frontend live URL
+  'http://localhost:5173',                 // for local development
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ['GET', 'POST', 'DELETE'],
+  credentials: true
+}));
+
 app.use(morgan('dev'));
 app.use(express.json());
 
