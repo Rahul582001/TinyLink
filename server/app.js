@@ -7,7 +7,7 @@ const errorHandler = require('./middlewares/errorHandler');
 const app = express();
 
 //app.use(cors());
-const cors = require('cors');
+
 
 const allowedOrigins = [
   'https://tinylink-gold-one.vercel.app',  // your frontend live URL
