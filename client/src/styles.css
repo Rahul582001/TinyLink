@@ -1,0 +1,27 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #031F39; color: #111827 }
+.container { max-width: 900px; margin: 32px auto; padding: 16px; background: #fff; border-radius: 8px }
+.header { display:flex; justify-content:space-between; align-items:center; padding-bottom:12px }
+table { width:100%; border-collapse:collapse }
+th,td { padding:8px; border-bottom:1px solid #e5e7eb; text-align:left }
+.small { font-size:0.9rem; color:#6b7280 }
+.btn { padding:8px 12px; border-radius:6px; border:none; cursor:pointer }
+.btn-primary { background:#48f3ba; color:white }
+.btn-danger { background:#EE82E2; color:white }
+.input { padding:8px; border:1px solid #d1d5db; border-radius:6px; width:100% }
+.row { display:flex; gap:8px }
+.col { flex:1; min-width:0 }
+.actions { display:flex; align-items:flex-end }
+.btn { padding:8px 12px; border-radius:6px; border:none; cursor:pointer; min-width:80px }
+
+/* form-specific: stack inputs vertically */
+.form-row { display:flex; flex-direction:column; gap:10px }
+.form-row .actions { align-items:flex-start }
+
+/* allow wrapping on small screens so items don't overlap */
+@media (max-width:640px) {
+	.row { flex-direction:column }
+	.actions { align-items:flex-start }
+}
+/* form styles */
+.form-group { display:flex; flex-direction:column }
+.form-label { color:#031F39; font-weight:600; font-size:14px; margin-bottom:6px }
